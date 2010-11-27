@@ -14,7 +14,6 @@ meta-spec:
   version: 1.4
 name: Bing-Search
 requires:
-  Bing::Search::Role::Types::ClickThroughUrlType: 0
   Carp: 0
   Data::Dumper: 0
   DateTime::Duration: 0
@@ -27,4 +26,4 @@ requires:
   URI: 1.54
   URI::QueryParam: 0
   vars: 0
-version: 1.103300
+version: 1.103310

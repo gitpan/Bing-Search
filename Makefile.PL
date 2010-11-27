@@ -22,7 +22,6 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Bing::Search',
   'PREREQ_PM' => {
-    'Bing::Search::Role::Types::ClickThroughUrlType' => '0',
     'Carp' => '0',
     'Data::Dumper' => '0',
     'DateTime::Duration' => '0',
@@ -36,7 +35,7 @@ my %WriteMakefileArgs = (
     'URI::QueryParam' => '0',
     'vars' => '0'
   },
-  'VERSION' => '1.103300',
+  'VERSION' => '1.103310',
   'test' => {
     'TESTS' => 't/*.t'
   }
