@@ -7,13 +7,14 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200006, CPAN::Meta::Converter version 2.101610'
+generated_by: 'Dist::Zilla version 4.200014, CPAN::Meta::Converter version 2.101610'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Bing-Search
 requires:
+  Bing::Search::Role::Result::Total: 0
   Carp: 0
   Data::Dumper: 0
   DateTime::Duration: 0
@@ -26,4 +27,4 @@ requires:
   URI: 1.54
   URI::QueryParam: 0
   vars: 0
-version: 1.111270
+version: 1.120270

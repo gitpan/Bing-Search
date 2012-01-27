@@ -125,13 +125,9 @@ lib/Bing/Search/Role/VideoRequest/Filter.pm
 lib/Bing/Search/Role/VideoRequest/Offset.pm
 lib/Bing/Search/Role/VideoRequest/SortBy.pm
 lib/Bing/Search/Role/WebRequest/Count.pm
-lib/Bing/Search/Role/WebRequest/Count.pm.bak
 lib/Bing/Search/Role/WebRequest/FileType.pm
-lib/Bing/Search/Role/WebRequest/FileType.pm.bak
 lib/Bing/Search/Role/WebRequest/Offset.pm
-lib/Bing/Search/Role/WebRequest/Offset.pm.bak
 lib/Bing/Search/Role/WebRequest/Options.pm
-lib/Bing/Search/Role/WebRequest/Options.pm.bak
 lib/Bing/Search/Source.pm
 lib/Bing/Search/Source/Image.pm
 lib/Bing/Search/Source/InstantAnswer.pm
