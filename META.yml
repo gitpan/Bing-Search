@@ -4,17 +4,18 @@ author:
   - 'Dave Houston <dhouston@cpan.org>'
 build_requires:
   Test::More: 0
+  strict: 0
+  warnings: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200014, CPAN::Meta::Converter version 2.101610'
+generated_by: 'Dist::Zilla version 4.300015, CPAN::Meta::Converter version 2.120630'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Bing-Search
 requires:
-  Bing::Search::Role::Result::Total: 0
   Carp: 0
   Data::Dumper: 0
   DateTime::Duration: 0
@@ -27,4 +28,4 @@ requires:
   URI: 1.54
   URI::QueryParam: 0
   vars: 0
-version: 1.120270
+version: 1.121210
