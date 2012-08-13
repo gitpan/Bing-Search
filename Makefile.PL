@@ -4,17 +4,15 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.30;
+use ExtUtils::MakeMaker 0.010;
 
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Implements the Bing AJAX Search API",
-  "AUTHOR" => "Dave Houston <dhouston\@cpan.org>",
+  "ABSTRACT" => "Parser of Bing Search Engine search results",
+  "AUTHOR" => "Dmitry Vinogradenko <jin\@hungosh.net>",
   "BUILD_REQUIRES" => {
-    "Test::More" => 0,
-    "strict" => 0,
-    "warnings" => 0
+  "Test::Most" => 0
   },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -24,27 +22,13 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Bing::Search",
   "PREREQ_PM" => {
-    "Carp" => 0,
-    "Data::Dumper" => 0,
-    "DateTime::Duration" => 0,
-    "DateTime::Format::DateParse" => 0,
-    "JSON" => "2.21",
-    "LWP::UserAgent" => "5.835",
-    "Moose" => "1.00",
-    "Moose::Role" => 0,
-    "Moose::Util::TypeConstraints" => 0,
-    "URI" => "1.54",
-    "URI::QueryParam" => 0,
-    "vars" => 0
+    "LWP::UserAgent" => 0
   },
-  "VERSION" => "1.121210",
-  "test" => {
-    "TESTS" => "t/*.t"
-  }
+  "VERSION" => "0.010",
 );
 
 
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+unless ( eval { ExtUtils::MakeMaker->VERSION(0.010) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
   my $pp = $WriteMakefileArgs{PREREQ_PM};
   for my $mod ( keys %$br ) {
@@ -58,9 +42,6 @@ unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
 }
 
 delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
-  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+  unless eval { ExtUtils::MakeMaker->VERSION(6.30) };
 
 WriteMakefile(%WriteMakefileArgs);
-
-
-

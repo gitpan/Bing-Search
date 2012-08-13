@@ -1,13 +1,70 @@
+NAME
+    Bing::Search - Parser of Bing Search Engine search results
+
+VERSION
+    version 0.010
+
+SYNOPSIS
+        my $bing = Bing::Search->New;
+        $bing->Search('test');
+        while ( my $result = $bing->GetResult ) {
+            print $result."\n";
+        }
+
+    You can also specify additional parameters
+    
+	#add proxy and response timeout (default 10 sec)
+	my $bing = Bing::Search->New("proxy"=>"http://127.0.0.1:8080","timeout"=>3);
+        #add minimal result pages (10 results per page) and number of first result
+        $bing->Search('query'=>'test','minPages'=>3,'first'=>10);
+    
+    Methods available in the module
+    
+	$result = $bing->GetResult; #Returns a result e.g. http://test.com/
+	@results = $bing->GetResults; #Returns an array with all the results recived
+	$totalFound = $bing->TotalCount; #Returns number of results the proposed search engine
+	$totalParsed = $bing->Count; #Returns number of results parsed with this module
+
+This is Perl module Iterator::Simple.
+
+INSTALLATION
+
+Bing::Search installation is straightforward. If your CPAN shell is set up,
+you should just be able to do
+
+    % cpan Bing::Search
+
+Download it, unpack it, then build it as per the usual:
+
+    % perl Makefile.PL
+    % make && make test
+
+Then install it:
+
+    % make install
 
 
-This archive contains the distribution Bing-Search,
-version 1.121210:
+USAGE
+  Bing::Search->new( ... )
+    Prepare a new search object (handle)
 
-  Implements the Bing AJAX Search API
+    You can configure the search by passing the following to "New":
 
-This software is copyright (c) 2010 by Dave Houston <dhouston@cpan.org>.
+        proxy           Specifies the proxy server to use when sending the request
+    			The syntax is the same as in the module LWP::UserAgent
 
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
+	timeout		Specifies the timeout waiting for response in seconds
 
-
+    $bing->GetResult; 
+    Returns a result e.g. http://test.com/
+    
+    $bing->GetResults; 
+    Returns an array with all the results recived
+    
+    $bing->TotalCount; 
+    Returns number of results the proposed search engine
+    
+    $bing->Count; 
+    Returns number of results parsed with this module
+AUTHOR
+    Dmitry Vinogradenko <jin@hungosh.net>
